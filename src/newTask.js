@@ -5,17 +5,16 @@ export function NewTask({ newTask, handleChange, handleSubmit }) {
         <form onSubmit={handleSubmit}>
             <input
                 name="title"
-                placeholder="Add a new task..."
-                value={newTask.title || ''}
-                onChange={handleChange} 
-            />
+                placeholder="Add new task..."
+                value={newTask.title || ""}
+                onChange={handleChange} />
             {!newTask.title ? null : (
                 <>
-                    <textarea 
-                        name="description"
-                        placeholder="Add a description..."
-                        value={newTask.description || ''}
-                        onChange={handleChange} />
+                    <textarea
+                    name="description"
+                    placeholder="Add a description"
+                    value={newTask.description || ""}
+                    onChange={handleChange} />
                     <button>Add task</button>
                 </>
             )}
