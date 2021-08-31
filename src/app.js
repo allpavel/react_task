@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { NewTask } from './newTask';
-import { TasksList } from './taskList';
+import NewTask from './newTask';
+import TasksList from './taskList';
 
-export function App() {
+export default function App() {
     const [newTask, setNewTask] = useState({});
     const handleChange = ({ target }) => {
         const { name, value } = target;
         setNewTask((prev) => ({...prev, id: Date.now(), [name]: value}));
     };
 
-    const [allTasks, setAllTasks] = useState({});
+    const [allTasks, setAllTasks] = useState([]);
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!newTask.title) return;
