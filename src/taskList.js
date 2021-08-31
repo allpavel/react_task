@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TasksList({ allTasks, handleDelete }) {
+export default function TasksList({ allTasks, handleDelete }) {
   return (
     <ul>
       {allTasks.map(({ title, description, id }) => (
